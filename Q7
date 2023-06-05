@@ -1,0 +1,18 @@
+# making empty classes
+class Student:
+    pass
+class Marks:
+    pass
+
+# creating instances
+Sumant = Student()
+fifty = Marks()
+
+# checking classes
+print(f"\nSumant - {type(Sumant)}")
+print(f"fifty - {type(fifty)}")
+
+# checking said classes' class
+print(f"\nStudent - {type(Student)}")
+print(f"Marks - {type(Marks)}")
+print(f" => Student and Marks classes are subclasses of built in object class - 'type'")

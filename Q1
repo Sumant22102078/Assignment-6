@@ -1,0 +1,15 @@
+def perfect(x):
+    sum = 0
+    if x > 0:
+        for y in range(1,x):
+            if x % y == 0:
+                sum += y
+        if sum == x:
+            print(f"{x} is a perfect no.")
+        else:
+            print(f"{x} is not a perfect no.")
+    else:
+        print(f"{x} is not a perfect no.")
+
+#calling function:
+perfect(28)

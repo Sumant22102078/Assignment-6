@@ -1,0 +1,11 @@
+def palindrome():
+    string = input("Enter a string\n")
+    string_nospaces = string.replace(' ','')
+    rev_string = string_nospaces[::-1]
+    if rev_string == string_nospaces:
+        print(f"'{string}' is a Palindrome.")
+    else:
+        print(f"'{string}' is not a Palindrome. ")
+
+#calling function:
+palindrome()

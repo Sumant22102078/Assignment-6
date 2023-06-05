@@ -1,0 +1,6 @@
+def student_data(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key} :-> {value}")
+    
+# calling function
+student_data(student_id = 22102078 , student_name = 'Sumant' , student_class = 'Civil Eng.')

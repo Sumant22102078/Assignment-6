@@ -1,0 +1,11 @@
+def sorted_sequence():
+    sequence_list = input("Enter a sequence of words separated by '-'(hyphen)\n").split('-')
+    sort_list = sorted(sequence_list)
+    for i in range(len(sequence_list)):
+        if i != len(sequence_list) - 1:
+            print(sort_list[i],end='-')
+        else:
+            print(sort_list[i])
+
+#calling function:
+sorted_sequence()

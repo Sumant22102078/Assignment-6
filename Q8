@@ -1,0 +1,14 @@
+lass Sum:
+    def triplets_0(self,no_list):
+        sol_list = list()
+        for x in no_list:
+            for y in no_list:
+                if no_list.index(y) != no_list.index(x):
+                    for z in no_list:
+                        if no_list.index(x) != no_list.index(z) and no_list.index(z) != no_list.index(y):
+                            if x != y != z and x + y + z == 0 and ([x,y,z] and [x,z,y] and [y,x,z] and [y,z,x] and [z,x,y] and [z,y,x]) not in sol_list:
+                                sol_list.append([x,y,z])
+        print(f"\nSum 0 List = {sol_list}\n")
+
+question = Sum()
+question.triplets_0([4,-6,0,2,1,-5,3,-7,8,-4])

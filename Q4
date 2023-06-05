@@ -1,0 +1,16 @@
+def pangram():
+    alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    string = input("Enter a string.\n")
+    cap_string_nospaces = (string.upper()).replace(' ','')
+    alpha_in_string = set()
+    for i in range(26):
+        for j in range(len(cap_string_nospaces)):
+            if alphabets[i] == cap_string_nospaces[j]:
+                alpha_in_string.add(alphabets[i])
+    if len(alpha_in_string) == 26:
+        print(f"Input string is a Pangram.")
+    else:
+        print(f"Input string is not a Pangram.")
+
+#calling function:
+pangram()

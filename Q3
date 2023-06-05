@@ -1,0 +1,20 @@
+def pascals_triangle():
+    from math import factorial
+    
+    # input rows
+    rows = int(input("Enter no. of rows- "))
+    for i in range(rows):
+
+        # for left spacing
+        for j in range(rows-i-1):
+            print(" ",end='')
+        
+        # nCr = n!/(r!*(n-r)!)
+        for j in range(i+1):
+            print(factorial(i)//(factorial(j)*factorial(i-j)) , end=' ')
+        
+        # for new line
+        print()     
+
+# calling function
+pascals_triangle()

@@ -1,0 +1,23 @@
+class Validity:
+
+# defining a method to check valid parentheses
+    def parentheses(self,stringg = str()):
+        
+    # deleting parantheses pairs from check string so that if null string left implies valid string
+        while len(stringg) != 0:
+            if '()' in stringg:
+                stringg = stringg.replace('()','')
+            elif '{}' in stringg:
+                stringg = stringg.replace('{}','')
+            elif '[]' in stringg:
+                stringg = stringg.replace('[]','')
+            else:
+                return False
+        return True
+
+# object instantiation and using method to finally check different strings
+check = Validity()
+stringg1 = '[()]{}'
+stringg2 = '][}{)('
+for i in [stringg1,stringg2]:
+    print(f"Is '{i}' valid - {check.parentheses(i)}")
